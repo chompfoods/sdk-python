@@ -723,7 +723,7 @@ class BrandedFoodObjectItems(object):
     def vitamins(self):
         """Gets the vitamins of this BrandedFoodObjectItems.  # noqa: E501
 
-        An array of vitamins that can be found in this item  # noqa: E501
+        An array of vitamins that are found in this item  # noqa: E501
 
         :return: The vitamins of this BrandedFoodObjectItems.  # noqa: E501
         :rtype: list[str]
@@ -734,7 +734,7 @@ class BrandedFoodObjectItems(object):
     def vitamins(self, vitamins):
         """Sets the vitamins of this BrandedFoodObjectItems.
 
-        An array of vitamins that can be found in this item  # noqa: E501
+        An array of vitamins that are found in this item  # noqa: E501
 
         :param vitamins: The vitamins of this BrandedFoodObjectItems.  # noqa: E501
         :type: list[str]
