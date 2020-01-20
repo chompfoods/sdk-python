@@ -468,13 +468,13 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def ingredient_search_php_get(self, find, list, **kwargs):  # noqa: E501
+    def food_ingredient_search_php_get(self, find, list, **kwargs):  # noqa: E501
         """Get raw/generic food ingredient item(s)  # noqa: E501
 
         # Get data for a specific ingredient or a specific set of ingredients.  __Example:__ ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=STRING/LIST&list=BOOLEAN&raw=BOOLEAN```   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.ingredient_search_php_get(find, list, async_req=True)
+        >>> thread = api.food_ingredient_search_php_get(find, list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -488,18 +488,18 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
+            return self.food_ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
         else:
-            (data) = self.ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
+            (data) = self.food_ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
             return data
 
-    def ingredient_search_php_get_with_http_info(self, find, list, **kwargs):  # noqa: E501
+    def food_ingredient_search_php_get_with_http_info(self, find, list, **kwargs):  # noqa: E501
         """Get raw/generic food ingredient item(s)  # noqa: E501
 
         # Get data for a specific ingredient or a specific set of ingredients.  __Example:__ ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=STRING/LIST&list=BOOLEAN&raw=BOOLEAN```   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.ingredient_search_php_get_with_http_info(find, list, async_req=True)
+        >>> thread = api.food_ingredient_search_php_get_with_http_info(find, list, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -523,18 +523,18 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ingredient_search_php_get" % key
+                    " to method food_ingredient_search_php_get" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'find' is set
         if ('find' not in params or
                 params['find'] is None):
-            raise ValueError("Missing the required parameter `find` when calling `ingredient_search_php_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `find` when calling `food_ingredient_search_php_get`")  # noqa: E501
         # verify the required parameter 'list' is set
         if ('list' not in params or
                 params['list'] is None):
-            raise ValueError("Missing the required parameter `list` when calling `ingredient_search_php_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `list` when calling `food_ingredient_search_php_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -564,7 +564,7 @@ class DefaultApi(object):
         auth_settings = ['ApiKeyAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/ingredient/search.php', 'GET',
+            '/food/ingredient/search.php', 'GET',
             path_params,
             query_params,
             header_params,

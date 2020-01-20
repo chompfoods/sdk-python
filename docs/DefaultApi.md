@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**food_branded_id_php_get**](DefaultApi.md#food_branded_id_php_get) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 [**food_branded_name_php_get**](DefaultApi.md#food_branded_name_php_get) | **GET** /food/branded/name.php | Get a branded food item by name
 [**food_branded_search_php_get**](DefaultApi.md#food_branded_search_php_get) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-[**ingredient_search_php_get**](DefaultApi.md#ingredient_search_php_get) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+[**food_ingredient_search_php_get**](DefaultApi.md#food_ingredient_search_php_get) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 # **food_branded_barcode_php_get**
 > BrandedFoodObject food_branded_barcode_php_get(code)
@@ -256,8 +256,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **ingredient_search_php_get**
-> IngredientObject ingredient_search_php_get(find, list, raw=raw, limit=limit)
+# **food_ingredient_search_php_get**
+> IngredientObject food_ingredient_search_php_get(find, list, raw=raw, limit=limit)
 
 Get raw/generic food ingredient item(s)
 
@@ -286,10 +286,10 @@ limit = 56 # int | Set maximum number of records you want the API to return.  __
 
 try:
     # Get raw/generic food ingredient item(s)
-    api_response = api_instance.ingredient_search_php_get(find, list, raw=raw, limit=limit)
+    api_response = api_instance.food_ingredient_search_php_get(find, list, raw=raw, limit=limit)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->ingredient_search_php_get: %s\n" % e)
+    print("Exception when calling DefaultApi->food_ingredient_search_php_get: %s\n" % e)
 ```
 
 ### Parameters

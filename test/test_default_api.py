@@ -56,8 +56,8 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_ingredient_search_php_get(self):
-        """Test case for ingredient_search_php_get
+    def test_food_ingredient_search_php_get(self):
+        """Test case for food_ingredient_search_php_get
 
         Get raw/generic food ingredient item(s)  # noqa: E501
         """
