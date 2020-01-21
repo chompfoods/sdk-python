@@ -36,9 +36,9 @@ class BrandedFoodObjectNutrientsUsda(object):
         'min': 'float',
         'max': 'float',
         'median': 'float',
+        'rank': 'int',
         'data_points': 'int',
         'footnote': 'str',
-        'source': 'str',
         'description': 'str'
     }
 
@@ -50,13 +50,13 @@ class BrandedFoodObjectNutrientsUsda(object):
         'min': 'min',
         'max': 'max',
         'median': 'median',
+        'rank': 'rank',
         'data_points': 'data_points',
         'footnote': 'footnote',
-        'source': 'source',
         'description': 'description'
     }
 
-    def __init__(self, id=None, name=None, per_100g=None, measurement_unit=None, min=None, max=None, median=None, data_points=None, footnote=None, source=None, description=None):  # noqa: E501
+    def __init__(self, id=None, name=None, per_100g=None, measurement_unit=None, min=None, max=None, median=None, rank=None, data_points=None, footnote=None, description=None):  # noqa: E501
         """BrandedFoodObjectNutrientsUsda - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -65,9 +65,9 @@ class BrandedFoodObjectNutrientsUsda(object):
         self._min = None
         self._max = None
         self._median = None
+        self._rank = None
         self._data_points = None
         self._footnote = None
-        self._source = None
         self._description = None
         self.discriminator = None
         if id is not None:
@@ -84,12 +84,12 @@ class BrandedFoodObjectNutrientsUsda(object):
             self.max = max
         if median is not None:
             self.median = median
+        if rank is not None:
+            self.rank = rank
         if data_points is not None:
             self.data_points = data_points
         if footnote is not None:
             self.footnote = footnote
-        if source is not None:
-            self.source = source
         if description is not None:
             self.description = description
 
@@ -255,6 +255,29 @@ class BrandedFoodObjectNutrientsUsda(object):
         self._median = median
 
     @property
+    def rank(self):
+        """Gets the rank of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
+
+        Nutrient rank  # noqa: E501
+
+        :return: The rank of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
+        :rtype: int
+        """
+        return self._rank
+
+    @rank.setter
+    def rank(self, rank):
+        """Sets the rank of this BrandedFoodObjectNutrientsUsda.
+
+        Nutrient rank  # noqa: E501
+
+        :param rank: The rank of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
+        :type: int
+        """
+
+        self._rank = rank
+
+    @property
     def data_points(self):
         """Gets the data_points of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
 
@@ -301,33 +324,10 @@ class BrandedFoodObjectNutrientsUsda(object):
         self._footnote = footnote
 
     @property
-    def source(self):
-        """Gets the source of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
-
-        Description of the nutrient source  # noqa: E501
-
-        :return: The source of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
-        :rtype: str
-        """
-        return self._source
-
-    @source.setter
-    def source(self, source):
-        """Sets the source of this BrandedFoodObjectNutrientsUsda.
-
-        Description of the nutrient source  # noqa: E501
-
-        :param source: The source of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
-        :type: str
-        """
-
-        self._source = source
-
-    @property
     def description(self):
         """Gets the description of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
 
-        Description of how the food nutrient value was obtained  # noqa: E501
+        Description of the nutrient source  # noqa: E501
 
         :return: The description of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
         :rtype: str
@@ -338,7 +338,7 @@ class BrandedFoodObjectNutrientsUsda(object):
     def description(self, description):
         """Sets the description of this BrandedFoodObjectNutrientsUsda.
 
-        Description of how the food nutrient value was obtained  # noqa: E501
+        Description of the nutrient source  # noqa: E501
 
         :param description: The description of this BrandedFoodObjectNutrientsUsda.  # noqa: E501
         :type: str
