@@ -52,7 +52,7 @@ class BrandedFoodObjectIngredients(object):
     def chomp(self):
         """Gets the chomp of this BrandedFoodObjectIngredients.  # noqa: E501
 
-        This item's ingredients as seen on ChompThis.com  # noqa: E501
+        Ingredients for this item from Chomp's internal database  # noqa: E501
 
         :return: The chomp of this BrandedFoodObjectIngredients.  # noqa: E501
         :rtype: str
@@ -63,7 +63,7 @@ class BrandedFoodObjectIngredients(object):
     def chomp(self, chomp):
         """Sets the chomp of this BrandedFoodObjectIngredients.
 
-        This item's ingredients as seen on ChompThis.com  # noqa: E501
+        Ingredients for this item from Chomp's internal database  # noqa: E501
 
         :param chomp: The chomp of this BrandedFoodObjectIngredients.  # noqa: E501
         :type: str
