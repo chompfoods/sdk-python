@@ -744,7 +744,7 @@ class BrandedFoodObjectItems(object):
     def common_name(self):
         """Gets the common_name of this BrandedFoodObjectItems.  # noqa: E501
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
 
         :return: The common_name of this BrandedFoodObjectItems.  # noqa: E501
         :rtype: str
@@ -755,7 +755,7 @@ class BrandedFoodObjectItems(object):
     def common_name(self, common_name):
         """Sets the common_name of this BrandedFoodObjectItems.
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
 
         :param common_name: The common_name of this BrandedFoodObjectItems.  # noqa: E501
         :type: str
