@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **diet_labels** | [**BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
 **components** | [**list[BrandedFoodObjectComponents]**](BrandedFoodObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) | [optional] 
 **portions** | [**list[BrandedFoodObjectPortions]**](BrandedFoodObjectPortions.md) | An array of objects containing information on discrete amounts of a food found in this item | [optional] 
-**common_name** | **str** | Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
+**common_names** | **str** | Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
 **description** | **str** | A description of this item | [optional] 
 **footnote** | **str** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall. | [optional] 
 
