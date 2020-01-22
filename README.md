@@ -179,6 +179,7 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectDietLabelsGlutenFree](docs/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [BrandedFoodObjectDietLabelsVegan](docs/BrandedFoodObjectDietLabelsVegan.md)
  - [BrandedFoodObjectDietLabelsVegetarian](docs/BrandedFoodObjectDietLabelsVegetarian.md)
+ - [BrandedFoodObjectIngredients](docs/BrandedFoodObjectIngredients.md)
  - [BrandedFoodObjectItems](docs/BrandedFoodObjectItems.md)
  - [BrandedFoodObjectNutrients](docs/BrandedFoodObjectNutrients.md)
  - [BrandedFoodObjectNutrientsChomp](docs/BrandedFoodObjectNutrientsChomp.md)

@@ -32,7 +32,7 @@ class BrandedFoodObjectItems(object):
         'barcode': 'str',
         'name': 'str',
         'brand': 'str',
-        'ingredients': 'str',
+        'ingredients': 'BrandedFoodObjectIngredients',
         'package': 'BrandedFoodObjectPackage',
         'serving': 'BrandedFoodObjectServing',
         'categories': 'list[str]',
@@ -256,10 +256,9 @@ class BrandedFoodObjectItems(object):
     def ingredients(self):
         """Gets the ingredients of this BrandedFoodObjectItems.  # noqa: E501
 
-        Ingredients in order of highest value to least  # noqa: E501
 
         :return: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: str
+        :rtype: BrandedFoodObjectIngredients
         """
         return self._ingredients
 
@@ -267,10 +266,9 @@ class BrandedFoodObjectItems(object):
     def ingredients(self, ingredients):
         """Sets the ingredients of this BrandedFoodObjectItems.
 
-        Ingredients in order of highest value to least  # noqa: E501
 
         :param ingredients: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
-        :type: str
+        :type: BrandedFoodObjectIngredients
         """
 
         self._ingredients = ingredients
