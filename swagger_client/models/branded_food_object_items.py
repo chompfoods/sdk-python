@@ -32,11 +32,11 @@ class BrandedFoodObjectItems(object):
         'barcode': 'str',
         'name': 'str',
         'brand': 'str',
-        'ingredients': 'BrandedFoodObjectIngredients',
+        'ingredients': 'str',
         'package': 'BrandedFoodObjectPackage',
         'serving': 'BrandedFoodObjectServing',
         'categories': 'list[str]',
-        'nutrients': 'BrandedFoodObjectNutrients',
+        'nutrients': 'list[BrandedFoodObjectNutrients]',
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'diet_flags': 'list[BrandedFoodObjectDietFlags]',
         'packaging_photos': 'BrandedFoodObjectPackagingPhotos',
@@ -226,9 +226,10 @@ class BrandedFoodObjectItems(object):
     def ingredients(self):
         """Gets the ingredients of this BrandedFoodObjectItems.  # noqa: E501
 
+        This food item's ingredients from greatest quantity to least  # noqa: E501
 
         :return: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectIngredients
+        :rtype: str
         """
         return self._ingredients
 
@@ -236,9 +237,10 @@ class BrandedFoodObjectItems(object):
     def ingredients(self, ingredients):
         """Sets the ingredients of this BrandedFoodObjectItems.
 
+        This food item's ingredients from greatest quantity to least  # noqa: E501
 
         :param ingredients: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectIngredients
+        :type: str
         """
 
         self._ingredients = ingredients
@@ -310,9 +312,10 @@ class BrandedFoodObjectItems(object):
     def nutrients(self):
         """Gets the nutrients of this BrandedFoodObjectItems.  # noqa: E501
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :return: The nutrients of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectNutrients
+        :rtype: list[BrandedFoodObjectNutrients]
         """
         return self._nutrients
 
@@ -320,9 +323,10 @@ class BrandedFoodObjectItems(object):
     def nutrients(self, nutrients):
         """Sets the nutrients of this BrandedFoodObjectItems.
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :param nutrients: The nutrients of this BrandedFoodObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectNutrients
+        :type: list[BrandedFoodObjectNutrients]
         """
 
         self._nutrients = nutrients

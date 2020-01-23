@@ -76,24 +76,6 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-id = 56 # int | #### The ID number of a branded food item.  **Example #1: Using Chomp ID** > ```&id=15```  **Example #2: Using FDC ID** > ```&id=FDC_ID&source=USDA``` 
-source = 'source_example' # str | #### Configure the endpoint to accept food IDs from various data sources. This endpoint defaults to Chomp but can accept FDC IDs.  **Example** > ```&source=Chomp```  **Tips**   * Pass in ```&source=USDA``` if you want to look up food items using a USDA FDC ID.  (optional)
-
-try:
-    # Get a branded food item using an ID number
-    api_response = api_instance.food_branded_id_php_get(id, source=source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->food_branded_id_php_get: %s\n" % e)
-
-# Configure API key authorization: ApiKeyAuth
-configuration = swagger_client.Configuration()
-configuration.api_key['api_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['api_key'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
 name = 'name_example' # str | #### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst``` 
 limit = 56 # int | #### Set maximum number of records you want the API to return.  **Example** > ```&limit=10```  (optional)
 page = 56 # int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1```  (optional)
@@ -163,7 +145,6 @@ All URIs are relative to *https://chompthis.com/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**food_branded_barcode_php_get**](docs/DefaultApi.md#food_branded_barcode_php_get) | **GET** /food/branded/barcode.php | Get a branded food item using a barcode
-*DefaultApi* | [**food_branded_id_php_get**](docs/DefaultApi.md#food_branded_id_php_get) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**food_branded_name_php_get**](docs/DefaultApi.md#food_branded_name_php_get) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**food_branded_search_php_get**](docs/DefaultApi.md#food_branded_search_php_get) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**food_ingredient_search_php_get**](docs/DefaultApi.md#food_ingredient_search_php_get) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
@@ -177,19 +158,14 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectDietLabelsGlutenFree](docs/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [BrandedFoodObjectDietLabelsVegan](docs/BrandedFoodObjectDietLabelsVegan.md)
  - [BrandedFoodObjectDietLabelsVegetarian](docs/BrandedFoodObjectDietLabelsVegetarian.md)
- - [BrandedFoodObjectIngredients](docs/BrandedFoodObjectIngredients.md)
  - [BrandedFoodObjectItems](docs/BrandedFoodObjectItems.md)
  - [BrandedFoodObjectNutrients](docs/BrandedFoodObjectNutrients.md)
- - [BrandedFoodObjectNutrientsChomp](docs/BrandedFoodObjectNutrientsChomp.md)
- - [BrandedFoodObjectNutrientsUsda](docs/BrandedFoodObjectNutrientsUsda.md)
  - [BrandedFoodObjectPackage](docs/BrandedFoodObjectPackage.md)
  - [BrandedFoodObjectPackagingPhotos](docs/BrandedFoodObjectPackagingPhotos.md)
  - [BrandedFoodObjectPackagingPhotosFront](docs/BrandedFoodObjectPackagingPhotosFront.md)
  - [BrandedFoodObjectPackagingPhotosIngredients](docs/BrandedFoodObjectPackagingPhotosIngredients.md)
  - [BrandedFoodObjectPackagingPhotosNutrition](docs/BrandedFoodObjectPackagingPhotosNutrition.md)
  - [BrandedFoodObjectServing](docs/BrandedFoodObjectServing.md)
- - [BrandedFoodObjectServingChomp](docs/BrandedFoodObjectServingChomp.md)
- - [BrandedFoodObjectServingUsda](docs/BrandedFoodObjectServingUsda.md)
  - [IngredientObject](docs/IngredientObject.md)
  - [IngredientObjectCalorieConversionFactor](docs/IngredientObjectCalorieConversionFactor.md)
  - [IngredientObjectComponents](docs/IngredientObjectComponents.md)

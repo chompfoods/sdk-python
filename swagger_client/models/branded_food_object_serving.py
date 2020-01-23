@@ -29,66 +29,98 @@ class BrandedFoodObjectServing(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'chomp': 'BrandedFoodObjectServingChomp',
-        'usda': 'BrandedFoodObjectServingUsda'
+        'size': 'str',
+        'measurement_unit': 'str',
+        'size_fulltext': 'str'
     }
 
     attribute_map = {
-        'chomp': 'chomp',
-        'usda': 'usda'
+        'size': 'size',
+        'measurement_unit': 'measurement_unit',
+        'size_fulltext': 'size_fulltext'
     }
 
-    def __init__(self, chomp=None, usda=None):  # noqa: E501
+    def __init__(self, size=None, measurement_unit=None, size_fulltext=None):  # noqa: E501
         """BrandedFoodObjectServing - a model defined in Swagger"""  # noqa: E501
-        self._chomp = None
-        self._usda = None
+        self._size = None
+        self._measurement_unit = None
+        self._size_fulltext = None
         self.discriminator = None
-        if chomp is not None:
-            self.chomp = chomp
-        if usda is not None:
-            self.usda = usda
+        if size is not None:
+            self.size = size
+        if measurement_unit is not None:
+            self.measurement_unit = measurement_unit
+        if size_fulltext is not None:
+            self.size_fulltext = size_fulltext
 
     @property
-    def chomp(self):
-        """Gets the chomp of this BrandedFoodObjectServing.  # noqa: E501
+    def size(self):
+        """Gets the size of this BrandedFoodObjectServing.  # noqa: E501
 
+        Serving size  # noqa: E501
 
-        :return: The chomp of this BrandedFoodObjectServing.  # noqa: E501
-        :rtype: BrandedFoodObjectServingChomp
+        :return: The size of this BrandedFoodObjectServing.  # noqa: E501
+        :rtype: str
         """
-        return self._chomp
+        return self._size
 
-    @chomp.setter
-    def chomp(self, chomp):
-        """Sets the chomp of this BrandedFoodObjectServing.
+    @size.setter
+    def size(self, size):
+        """Sets the size of this BrandedFoodObjectServing.
 
+        Serving size  # noqa: E501
 
-        :param chomp: The chomp of this BrandedFoodObjectServing.  # noqa: E501
-        :type: BrandedFoodObjectServingChomp
+        :param size: The size of this BrandedFoodObjectServing.  # noqa: E501
+        :type: str
         """
 
-        self._chomp = chomp
+        self._size = size
 
     @property
-    def usda(self):
-        """Gets the usda of this BrandedFoodObjectServing.  # noqa: E501
+    def measurement_unit(self):
+        """Gets the measurement_unit of this BrandedFoodObjectServing.  # noqa: E501
 
+        Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)  # noqa: E501
 
-        :return: The usda of this BrandedFoodObjectServing.  # noqa: E501
-        :rtype: BrandedFoodObjectServingUsda
+        :return: The measurement_unit of this BrandedFoodObjectServing.  # noqa: E501
+        :rtype: str
         """
-        return self._usda
+        return self._measurement_unit
 
-    @usda.setter
-    def usda(self, usda):
-        """Sets the usda of this BrandedFoodObjectServing.
+    @measurement_unit.setter
+    def measurement_unit(self, measurement_unit):
+        """Sets the measurement_unit of this BrandedFoodObjectServing.
 
+        Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)  # noqa: E501
 
-        :param usda: The usda of this BrandedFoodObjectServing.  # noqa: E501
-        :type: BrandedFoodObjectServingUsda
+        :param measurement_unit: The measurement_unit of this BrandedFoodObjectServing.  # noqa: E501
+        :type: str
         """
 
-        self._usda = usda
+        self._measurement_unit = measurement_unit
+
+    @property
+    def size_fulltext(self):
+        """Gets the size_fulltext of this BrandedFoodObjectServing.  # noqa: E501
+
+        Serving size description  # noqa: E501
+
+        :return: The size_fulltext of this BrandedFoodObjectServing.  # noqa: E501
+        :rtype: str
+        """
+        return self._size_fulltext
+
+    @size_fulltext.setter
+    def size_fulltext(self, size_fulltext):
+        """Sets the size_fulltext of this BrandedFoodObjectServing.
+
+        Serving size description  # noqa: E501
+
+        :param size_fulltext: The size_fulltext of this BrandedFoodObjectServing.  # noqa: E501
+        :type: str
+        """
+
+        self._size_fulltext = size_fulltext
 
     def to_dict(self):
         """Returns the model properties as a dict"""

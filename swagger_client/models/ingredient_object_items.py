@@ -31,7 +31,7 @@ class IngredientObjectItems(object):
     swagger_types = {
         'name': 'str',
         'categories': 'list[str]',
-        'nutrients': 'IngredientObjectNutrients',
+        'nutrients': 'list[IngredientObjectNutrients]',
         'calorie_conversion_factor': 'IngredientObjectCalorieConversionFactor',
         'protein_conversion_factor': 'float',
         'diet_labels': 'BrandedFoodObjectDietLabels',
@@ -141,9 +141,10 @@ class IngredientObjectItems(object):
     def nutrients(self):
         """Gets the nutrients of this IngredientObjectItems.  # noqa: E501
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :return: The nutrients of this IngredientObjectItems.  # noqa: E501
-        :rtype: IngredientObjectNutrients
+        :rtype: list[IngredientObjectNutrients]
         """
         return self._nutrients
 
@@ -151,9 +152,10 @@ class IngredientObjectItems(object):
     def nutrients(self, nutrients):
         """Sets the nutrients of this IngredientObjectItems.
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :param nutrients: The nutrients of this IngredientObjectItems.  # noqa: E501
-        :type: IngredientObjectNutrients
+        :type: list[IngredientObjectNutrients]
         """
 
         self._nutrients = nutrients

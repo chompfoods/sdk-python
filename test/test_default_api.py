@@ -35,13 +35,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_food_branded_id_php_get(self):
-        """Test case for food_branded_id_php_get
-
-        Get a branded food item using an ID number  # noqa: E501
-        """
-        pass
-
     def test_food_branded_name_php_get(self):
         """Test case for food_branded_name_php_get
 
