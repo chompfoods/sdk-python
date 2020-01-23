@@ -3,7 +3,7 @@
 """
     Chomp Food Database API Documentation
 
-    ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |   # noqa: E501
+    ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)   # noqa: E501
 
     OpenAPI spec version: 1.0.0-oas3
     
@@ -37,7 +37,7 @@ class IngredientObjectItems(object):
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'components': 'list[IngredientObjectComponents]',
         'portions': 'list[IngredientObjectPortions]',
-        'common_names': 'str',
+        'common_name': 'str',
         'description': 'str',
         'footnote': 'str'
     }
@@ -51,12 +51,12 @@ class IngredientObjectItems(object):
         'diet_labels': 'diet_labels',
         'components': 'components',
         'portions': 'portions',
-        'common_names': 'common_names',
+        'common_name': 'common_name',
         'description': 'description',
         'footnote': 'footnote'
     }
 
-    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, components=None, portions=None, common_names=None, description=None, footnote=None):  # noqa: E501
+    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, components=None, portions=None, common_name=None, description=None, footnote=None):  # noqa: E501
         """IngredientObjectItems - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._categories = None
@@ -66,7 +66,7 @@ class IngredientObjectItems(object):
         self._diet_labels = None
         self._components = None
         self._portions = None
-        self._common_names = None
+        self._common_name = None
         self._description = None
         self._footnote = None
         self.discriminator = None
@@ -86,8 +86,8 @@ class IngredientObjectItems(object):
             self.components = components
         if portions is not None:
             self.portions = portions
-        if common_names is not None:
-            self.common_names = common_names
+        if common_name is not None:
+            self.common_name = common_name
         if description is not None:
             self.description = description
         if footnote is not None:
@@ -272,27 +272,27 @@ class IngredientObjectItems(object):
         self._portions = portions
 
     @property
-    def common_names(self):
-        """Gets the common_names of this IngredientObjectItems.  # noqa: E501
+    def common_name(self):
+        """Gets the common_name of this IngredientObjectItems.  # noqa: E501
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
 
-        :return: The common_names of this IngredientObjectItems.  # noqa: E501
+        :return: The common_name of this IngredientObjectItems.  # noqa: E501
         :rtype: str
         """
-        return self._common_names
+        return self._common_name
 
-    @common_names.setter
-    def common_names(self, common_names):
-        """Sets the common_names of this IngredientObjectItems.
+    @common_name.setter
+    def common_name(self, common_name):
+        """Sets the common_name of this IngredientObjectItems.
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
 
-        :param common_names: The common_names of this IngredientObjectItems.  # noqa: E501
+        :param common_name: The common_name of this IngredientObjectItems.  # noqa: E501
         :type: str
         """
 
-        self._common_names = common_names
+        self._common_name = common_name
 
     @property
     def description(self):
