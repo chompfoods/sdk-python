@@ -53,8 +53,7 @@ class BrandedFoodObjectItems(object):
         'traces': 'list[str]',
         'vitamins': 'list[str]',
         'description': 'str',
-        'keywords': 'list[str]',
-        'footnote': 'str'
+        'keywords': 'list[str]'
     }
 
     attribute_map = {
@@ -82,11 +81,10 @@ class BrandedFoodObjectItems(object):
         'traces': 'traces',
         'vitamins': 'vitamins',
         'description': 'description',
-        'keywords': 'keywords',
-        'footnote': 'footnote'
+        'keywords': 'keywords'
     }
 
-    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None, footnote=None):  # noqa: E501
+    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None):  # noqa: E501
         """BrandedFoodObjectItems - a model defined in Swagger"""  # noqa: E501
         self._barcode = None
         self._name = None
@@ -113,7 +111,6 @@ class BrandedFoodObjectItems(object):
         self._vitamins = None
         self._description = None
         self._keywords = None
-        self._footnote = None
         self.discriminator = None
         if barcode is not None:
             self.barcode = barcode
@@ -165,8 +162,6 @@ class BrandedFoodObjectItems(object):
             self.description = description
         if keywords is not None:
             self.keywords = keywords
-        if footnote is not None:
-            self.footnote = footnote
 
     @property
     def barcode(self):
@@ -724,29 +719,6 @@ class BrandedFoodObjectItems(object):
         """
 
         self._keywords = keywords
-
-    @property
-    def footnote(self):
-        """Gets the footnote of this BrandedFoodObjectItems.  # noqa: E501
-
-        Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.  # noqa: E501
-
-        :return: The footnote of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: str
-        """
-        return self._footnote
-
-    @footnote.setter
-    def footnote(self, footnote):
-        """Sets the footnote of this BrandedFoodObjectItems.
-
-        Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.  # noqa: E501
-
-        :param footnote: The footnote of this BrandedFoodObjectItems.  # noqa: E501
-        :type: str
-        """
-
-        self._footnote = footnote
 
     def to_dict(self):
         """Returns the model properties as a dict"""
