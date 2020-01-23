@@ -35,8 +35,8 @@ class IngredientObjectItems(object):
         'calorie_conversion_factor': 'BrandedFoodObjectCalorieConversionFactor',
         'protein_conversion_factor': 'float',
         'diet_labels': 'BrandedFoodObjectDietLabels',
-        'components': 'list[BrandedFoodObjectComponents]',
-        'portions': 'list[BrandedFoodObjectPortions]',
+        'components': 'list[IngredientObjectComponents]',
+        'portions': 'list[IngredientObjectPortions]',
         'common_names': 'str',
         'description': 'str',
         'footnote': 'str'
@@ -230,7 +230,7 @@ class IngredientObjectItems(object):
         An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
 
         :return: The components of this IngredientObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectComponents]
+        :rtype: list[IngredientObjectComponents]
         """
         return self._components
 
@@ -241,7 +241,7 @@ class IngredientObjectItems(object):
         An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
 
         :param components: The components of this IngredientObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectComponents]
+        :type: list[IngredientObjectComponents]
         """
 
         self._components = components
@@ -253,7 +253,7 @@ class IngredientObjectItems(object):
         An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
 
         :return: The portions of this IngredientObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectPortions]
+        :rtype: list[IngredientObjectPortions]
         """
         return self._portions
 
@@ -264,7 +264,7 @@ class IngredientObjectItems(object):
         An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
 
         :param portions: The portions of this IngredientObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectPortions]
+        :type: list[IngredientObjectPortions]
         """
 
         self._portions = portions

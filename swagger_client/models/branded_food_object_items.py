@@ -42,8 +42,6 @@ class BrandedFoodObjectItems(object):
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'diet_flags': 'list[BrandedFoodObjectDietFlags]',
         'packaging_photos': 'BrandedFoodObjectPackagingPhotos',
-        'components': 'list[BrandedFoodObjectComponents]',
-        'portions': 'list[BrandedFoodObjectPortions]',
         'allergens': 'list[str]',
         'brand_list': 'list[str]',
         'countries': 'list[str]',
@@ -73,8 +71,6 @@ class BrandedFoodObjectItems(object):
         'diet_labels': 'diet_labels',
         'diet_flags': 'diet_flags',
         'packaging_photos': 'packaging_photos',
-        'components': 'components',
-        'portions': 'portions',
         'allergens': 'allergens',
         'brand_list': 'brand_list',
         'countries': 'countries',
@@ -90,7 +86,7 @@ class BrandedFoodObjectItems(object):
         'footnote': 'footnote'
     }
 
-    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, components=None, portions=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None, footnote=None):  # noqa: E501
+    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None, footnote=None):  # noqa: E501
         """BrandedFoodObjectItems - a model defined in Swagger"""  # noqa: E501
         self._barcode = None
         self._name = None
@@ -105,8 +101,6 @@ class BrandedFoodObjectItems(object):
         self._diet_labels = None
         self._diet_flags = None
         self._packaging_photos = None
-        self._components = None
-        self._portions = None
         self._allergens = None
         self._brand_list = None
         self._countries = None
@@ -147,10 +141,6 @@ class BrandedFoodObjectItems(object):
             self.diet_flags = diet_flags
         if packaging_photos is not None:
             self.packaging_photos = packaging_photos
-        if components is not None:
-            self.components = components
-        if portions is not None:
-            self.portions = portions
         if allergens is not None:
             self.allergens = allergens
         if brand_list is not None:
@@ -460,52 +450,6 @@ class BrandedFoodObjectItems(object):
         """
 
         self._packaging_photos = packaging_photos
-
-    @property
-    def components(self):
-        """Gets the components of this BrandedFoodObjectItems.  # noqa: E501
-
-        An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
-
-        :return: The components of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectComponents]
-        """
-        return self._components
-
-    @components.setter
-    def components(self, components):
-        """Sets the components of this BrandedFoodObjectItems.
-
-        An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
-
-        :param components: The components of this BrandedFoodObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectComponents]
-        """
-
-        self._components = components
-
-    @property
-    def portions(self):
-        """Gets the portions of this BrandedFoodObjectItems.  # noqa: E501
-
-        An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
-
-        :return: The portions of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectPortions]
-        """
-        return self._portions
-
-    @portions.setter
-    def portions(self, portions):
-        """Sets the portions of this BrandedFoodObjectItems.
-
-        An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
-
-        :param portions: The portions of this BrandedFoodObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectPortions]
-        """
-
-        self._portions = portions
 
     @property
     def allergens(self):

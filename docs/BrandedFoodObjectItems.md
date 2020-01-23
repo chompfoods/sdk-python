@@ -16,8 +16,6 @@ Name | Type | Description | Notes
 **diet_labels** | [**BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
 **diet_flags** | [**list[BrandedFoodObjectDietFlags]**](BrandedFoodObjectDietFlags.md) | An array of ingredient objects that were flagged while grading this item for compatibility with each diet | [optional] 
 **packaging_photos** | [**BrandedFoodObjectPackagingPhotos**](BrandedFoodObjectPackagingPhotos.md) |  | [optional] 
-**components** | [**list[BrandedFoodObjectComponents]**](BrandedFoodObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) | [optional] 
-**portions** | [**list[BrandedFoodObjectPortions]**](BrandedFoodObjectPortions.md) | An array of objects containing information on discrete amounts of a food found in this item | [optional] 
 **allergens** | **list[str]** | An array of ingredients in this item that may cause allergic reactions in people | [optional] 
 **brand_list** | **list[str]** | An array of brands we have associated with this item. Some items are sold by more than 1 brand. | [optional] 
 **countries** | **list[str]** | An array of countries where this item is sold | [optional] 
