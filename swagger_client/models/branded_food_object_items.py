@@ -37,8 +37,6 @@ class BrandedFoodObjectItems(object):
         'serving': 'BrandedFoodObjectServing',
         'categories': 'list[str]',
         'nutrients': 'BrandedFoodObjectNutrients',
-        'calorie_conversion_factor': 'BrandedFoodObjectCalorieConversionFactor',
-        'protein_conversion_factor': 'float',
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'diet_flags': 'list[BrandedFoodObjectDietFlags]',
         'packaging_photos': 'BrandedFoodObjectPackagingPhotos',
@@ -65,8 +63,6 @@ class BrandedFoodObjectItems(object):
         'serving': 'serving',
         'categories': 'categories',
         'nutrients': 'nutrients',
-        'calorie_conversion_factor': 'calorie_conversion_factor',
-        'protein_conversion_factor': 'protein_conversion_factor',
         'diet_labels': 'diet_labels',
         'diet_flags': 'diet_flags',
         'packaging_photos': 'packaging_photos',
@@ -84,7 +80,7 @@ class BrandedFoodObjectItems(object):
         'keywords': 'keywords'
     }
 
-    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None):  # noqa: E501
+    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None):  # noqa: E501
         """BrandedFoodObjectItems - a model defined in Swagger"""  # noqa: E501
         self._barcode = None
         self._name = None
@@ -94,8 +90,6 @@ class BrandedFoodObjectItems(object):
         self._serving = None
         self._categories = None
         self._nutrients = None
-        self._calorie_conversion_factor = None
-        self._protein_conversion_factor = None
         self._diet_labels = None
         self._diet_flags = None
         self._packaging_photos = None
@@ -128,10 +122,6 @@ class BrandedFoodObjectItems(object):
             self.categories = categories
         if nutrients is not None:
             self.nutrients = nutrients
-        if calorie_conversion_factor is not None:
-            self.calorie_conversion_factor = calorie_conversion_factor
-        if protein_conversion_factor is not None:
-            self.protein_conversion_factor = protein_conversion_factor
         if diet_labels is not None:
             self.diet_labels = diet_labels
         if diet_flags is not None:
@@ -336,50 +326,6 @@ class BrandedFoodObjectItems(object):
         """
 
         self._nutrients = nutrients
-
-    @property
-    def calorie_conversion_factor(self):
-        """Gets the calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-
-
-        :return: The calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectCalorieConversionFactor
-        """
-        return self._calorie_conversion_factor
-
-    @calorie_conversion_factor.setter
-    def calorie_conversion_factor(self, calorie_conversion_factor):
-        """Sets the calorie_conversion_factor of this BrandedFoodObjectItems.
-
-
-        :param calorie_conversion_factor: The calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectCalorieConversionFactor
-        """
-
-        self._calorie_conversion_factor = calorie_conversion_factor
-
-    @property
-    def protein_conversion_factor(self):
-        """Gets the protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-
-        The multiplication factor used to calculate protein from nitrogen  # noqa: E501
-
-        :return: The protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: float
-        """
-        return self._protein_conversion_factor
-
-    @protein_conversion_factor.setter
-    def protein_conversion_factor(self, protein_conversion_factor):
-        """Sets the protein_conversion_factor of this BrandedFoodObjectItems.
-
-        The multiplication factor used to calculate protein from nitrogen  # noqa: E501
-
-        :param protein_conversion_factor: The protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :type: float
-        """
-
-        self._protein_conversion_factor = protein_conversion_factor
 
     @property
     def diet_labels(self):

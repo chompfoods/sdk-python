@@ -32,7 +32,7 @@ class IngredientObjectItems(object):
         'name': 'str',
         'categories': 'list[str]',
         'nutrients': 'IngredientObjectNutrients',
-        'calorie_conversion_factor': 'BrandedFoodObjectCalorieConversionFactor',
+        'calorie_conversion_factor': 'IngredientObjectCalorieConversionFactor',
         'protein_conversion_factor': 'float',
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'components': 'list[IngredientObjectComponents]',
@@ -164,7 +164,7 @@ class IngredientObjectItems(object):
 
 
         :return: The calorie_conversion_factor of this IngredientObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectCalorieConversionFactor
+        :rtype: IngredientObjectCalorieConversionFactor
         """
         return self._calorie_conversion_factor
 
@@ -174,7 +174,7 @@ class IngredientObjectItems(object):
 
 
         :param calorie_conversion_factor: The calorie_conversion_factor of this IngredientObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectCalorieConversionFactor
+        :type: IngredientObjectCalorieConversionFactor
         """
 
         self._calorie_conversion_factor = calorie_conversion_factor
