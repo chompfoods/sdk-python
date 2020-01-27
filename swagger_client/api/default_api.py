@@ -373,18 +373,17 @@ class DefaultApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def food_ingredient_search_php_get(self, find, list, **kwargs):  # noqa: E501
+    def food_ingredient_search_php_get(self, find, **kwargs):  # noqa: E501
         """Get raw/generic food ingredient item(s)  # noqa: E501
 
-        ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli&raw=true```  **Example #2: Set of Ingredients** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli,cauliflower,spinach&list=true&raw=true```  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.   # noqa: E501
+        ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli```  **Example #2: Set of Ingredients** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli,cauliflower,spinach```  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.food_ingredient_search_php_get(find, list, async_req=True)
+        >>> thread = api.food_ingredient_search_php_get(find, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach&list=true```  **Important Notes**    * Set the \"list\" parameter to \"true\" before passing in a comma-separated list of ingredients.   * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
-        :param bool list: #### Setting ```&list=true``` will configure this endpoint to allow searching for ingredients using a comma-separated list. By default, this endpoint will **only** return results for the first ingredient.  **Example** > ```&list=true```  (required)
+        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
         :param bool raw: #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` 
         :param int limit: #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` 
         :return: IngredientObject
@@ -393,23 +392,22 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.food_ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
+            return self.food_ingredient_search_php_get_with_http_info(find, **kwargs)  # noqa: E501
         else:
-            (data) = self.food_ingredient_search_php_get_with_http_info(find, list, **kwargs)  # noqa: E501
+            (data) = self.food_ingredient_search_php_get_with_http_info(find, **kwargs)  # noqa: E501
             return data
 
-    def food_ingredient_search_php_get_with_http_info(self, find, list, **kwargs):  # noqa: E501
+    def food_ingredient_search_php_get_with_http_info(self, find, **kwargs):  # noqa: E501
         """Get raw/generic food ingredient item(s)  # noqa: E501
 
-        ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli&raw=true```  **Example #2: Set of Ingredients** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli,cauliflower,spinach&list=true&raw=true```  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.   # noqa: E501
+        ## Get data for a specific ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli```  **Example #2: Set of Ingredients** > ```https://chompthis.com/api/v2/ingredient/search.php?api_key=API_KEY&find=broccoli,cauliflower,spinach```  **Tips**   * Expose ingredient endpoints by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  > This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren't sure how to upgrade your subscription.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.food_ingredient_search_php_get_with_http_info(find, list, async_req=True)
+        >>> thread = api.food_ingredient_search_php_get_with_http_info(find, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach&list=true```  **Important Notes**    * Set the \"list\" parameter to \"true\" before passing in a comma-separated list of ingredients.   * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
-        :param bool list: #### Setting ```&list=true``` will configure this endpoint to allow searching for ingredients using a comma-separated list. By default, this endpoint will **only** return results for the first ingredient.  **Example** > ```&list=true```  (required)
+        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
         :param bool raw: #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` 
         :param int limit: #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` 
         :return: IngredientObject
@@ -417,7 +415,7 @@ class DefaultApi(object):
                  returns the request thread.
         """
 
-        all_params = ['find', 'list', 'raw', 'limit']  # noqa: E501
+        all_params = ['find', 'raw', 'limit']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -436,10 +434,6 @@ class DefaultApi(object):
         if ('find' not in params or
                 params['find'] is None):
             raise ValueError("Missing the required parameter `find` when calling `food_ingredient_search_php_get`")  # noqa: E501
-        # verify the required parameter 'list' is set
-        if ('list' not in params or
-                params['list'] is None):
-            raise ValueError("Missing the required parameter `list` when calling `food_ingredient_search_php_get`")  # noqa: E501
 
         collection_formats = {}
 
@@ -448,8 +442,6 @@ class DefaultApi(object):
         query_params = []
         if 'find' in params:
             query_params.append(('find', params['find']))  # noqa: E501
-        if 'list' in params:
-            query_params.append(('list', params['list']))  # noqa: E501
         if 'raw' in params:
             query_params.append(('raw', params['raw']))  # noqa: E501
         if 'limit' in params:

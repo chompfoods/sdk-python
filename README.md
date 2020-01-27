@@ -125,14 +125,13 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-find = 56 # int | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach&list=true```  **Important Notes**    * Set the \"list\" parameter to \"true\" before passing in a comma-separated list of ingredients.   * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. 
-list = true # bool | #### Setting ```&list=true``` will configure this endpoint to allow searching for ingredients using a comma-separated list. By default, this endpoint will **only** return results for the first ingredient.  **Example** > ```&list=true``` 
+find = 56 # int | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. 
 raw = true # bool | #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true```  (optional)
 limit = 56 # int | #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3```  (optional)
 
 try:
     # Get raw/generic food ingredient item(s)
-    api_response = api_instance.food_ingredient_search_php_get(find, list, raw=raw, limit=limit)
+    api_response = api_instance.food_ingredient_search_php_get(find, raw=raw, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->food_ingredient_search_php_get: %s\n" % e)
