@@ -383,7 +383,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
+        :param str find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
         :param bool raw: #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` 
         :param int limit: #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` 
         :return: IngredientObject
@@ -407,7 +407,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param int find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
+        :param str find: Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.  (required)
         :param bool raw: #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true``` 
         :param int limit: #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3``` 
         :return: IngredientObject
