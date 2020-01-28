@@ -34,11 +34,9 @@ class IngredientObjectItems(object):
         'nutrients': 'list[IngredientObjectNutrients]',
         'calorie_conversion_factor': 'IngredientObjectCalorieConversionFactor',
         'protein_conversion_factor': 'float',
-        'diet_labels': 'BrandedFoodObjectDietLabels',
         'components': 'list[IngredientObjectComponents]',
         'portions': 'list[IngredientObjectPortions]',
         'common_name': 'str',
-        'description': 'str',
         'footnote': 'str'
     }
 
@@ -48,26 +46,22 @@ class IngredientObjectItems(object):
         'nutrients': 'nutrients',
         'calorie_conversion_factor': 'calorie_conversion_factor',
         'protein_conversion_factor': 'protein_conversion_factor',
-        'diet_labels': 'diet_labels',
         'components': 'components',
         'portions': 'portions',
         'common_name': 'common_name',
-        'description': 'description',
         'footnote': 'footnote'
     }
 
-    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, components=None, portions=None, common_name=None, description=None, footnote=None):  # noqa: E501
+    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, components=None, portions=None, common_name=None, footnote=None):  # noqa: E501
         """IngredientObjectItems - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._categories = None
         self._nutrients = None
         self._calorie_conversion_factor = None
         self._protein_conversion_factor = None
-        self._diet_labels = None
         self._components = None
         self._portions = None
         self._common_name = None
-        self._description = None
         self._footnote = None
         self.discriminator = None
         if name is not None:
@@ -80,16 +74,12 @@ class IngredientObjectItems(object):
             self.calorie_conversion_factor = calorie_conversion_factor
         if protein_conversion_factor is not None:
             self.protein_conversion_factor = protein_conversion_factor
-        if diet_labels is not None:
-            self.diet_labels = diet_labels
         if components is not None:
             self.components = components
         if portions is not None:
             self.portions = portions
         if common_name is not None:
             self.common_name = common_name
-        if description is not None:
-            self.description = description
         if footnote is not None:
             self.footnote = footnote
 
@@ -205,27 +195,6 @@ class IngredientObjectItems(object):
         self._protein_conversion_factor = protein_conversion_factor
 
     @property
-    def diet_labels(self):
-        """Gets the diet_labels of this IngredientObjectItems.  # noqa: E501
-
-
-        :return: The diet_labels of this IngredientObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectDietLabels
-        """
-        return self._diet_labels
-
-    @diet_labels.setter
-    def diet_labels(self, diet_labels):
-        """Sets the diet_labels of this IngredientObjectItems.
-
-
-        :param diet_labels: The diet_labels of this IngredientObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectDietLabels
-        """
-
-        self._diet_labels = diet_labels
-
-    @property
     def components(self):
         """Gets the components of this IngredientObjectItems.  # noqa: E501
 
@@ -293,29 +262,6 @@ class IngredientObjectItems(object):
         """
 
         self._common_name = common_name
-
-    @property
-    def description(self):
-        """Gets the description of this IngredientObjectItems.  # noqa: E501
-
-        A description of this item  # noqa: E501
-
-        :return: The description of this IngredientObjectItems.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this IngredientObjectItems.
-
-        A description of this item  # noqa: E501
-
-        :param description: The description of this IngredientObjectItems.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def footnote(self):
