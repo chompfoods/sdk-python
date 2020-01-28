@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **components** | [**list[IngredientObjectComponents]**](IngredientObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) | [optional] 
 **portions** | [**list[IngredientObjectPortions]**](IngredientObjectPortions.md) | An array of objects containing information on discrete amounts of a food found in this item | [optional] 
 **common_name** | **str** | Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
-**footnote** | **str** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall. | [optional] 
-**search_term** | **str** | The original search term that found this food item. | [optional] 
-**score** | **str** | A value that represents how similar the name of this food item is to the original search term. | [optional] 
+**footnote** | **str** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall | [optional] 
+**search_term** | **str** | The original search term that found this food item | [optional] 
+**score** | **str** | A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
