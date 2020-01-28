@@ -125,13 +125,12 @@ configuration.api_key['api_key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.DefaultApi(swagger_client.ApiClient(configuration))
-find = 'find_example' # str | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. 
-raw = true # bool | #### Optionally filter the search result to only include raw ingredients. The default value is \"**false**.\"  **Example** > ```&raw=true```  (optional)
+find = 'find_example' # str | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=raw broccoli```  **Example #2: Set of Ingredients** > ```&find=raw broccoli,raw cauliflower,mashed potatoes```  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. 
 limit = 56 # int | #### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3```  (optional)
 
 try:
     # Get raw/generic food ingredient item(s)
-    api_response = api_instance.food_ingredient_search_php_get(find, raw=raw, limit=limit)
+    api_response = api_instance.food_ingredient_search_php_get(find, limit=limit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->food_ingredient_search_php_get: %s\n" % e)
