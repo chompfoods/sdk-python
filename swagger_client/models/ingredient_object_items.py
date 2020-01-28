@@ -37,7 +37,9 @@ class IngredientObjectItems(object):
         'components': 'list[IngredientObjectComponents]',
         'portions': 'list[IngredientObjectPortions]',
         'common_name': 'str',
-        'footnote': 'str'
+        'footnote': 'str',
+        'search_term': 'str',
+        'score': 'str'
     }
 
     attribute_map = {
@@ -49,10 +51,12 @@ class IngredientObjectItems(object):
         'components': 'components',
         'portions': 'portions',
         'common_name': 'common_name',
-        'footnote': 'footnote'
+        'footnote': 'footnote',
+        'search_term': 'search_term',
+        'score': 'score'
     }
 
-    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, components=None, portions=None, common_name=None, footnote=None):  # noqa: E501
+    def __init__(self, name=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, components=None, portions=None, common_name=None, footnote=None, search_term=None, score=None):  # noqa: E501
         """IngredientObjectItems - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._categories = None
@@ -63,6 +67,8 @@ class IngredientObjectItems(object):
         self._portions = None
         self._common_name = None
         self._footnote = None
+        self._search_term = None
+        self._score = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -82,6 +88,10 @@ class IngredientObjectItems(object):
             self.common_name = common_name
         if footnote is not None:
             self.footnote = footnote
+        if search_term is not None:
+            self.search_term = search_term
+        if score is not None:
+            self.score = score
 
     @property
     def name(self):
@@ -285,6 +295,52 @@ class IngredientObjectItems(object):
         """
 
         self._footnote = footnote
+
+    @property
+    def search_term(self):
+        """Gets the search_term of this IngredientObjectItems.  # noqa: E501
+
+        The original search term that found this food item.  # noqa: E501
+
+        :return: The search_term of this IngredientObjectItems.  # noqa: E501
+        :rtype: str
+        """
+        return self._search_term
+
+    @search_term.setter
+    def search_term(self, search_term):
+        """Sets the search_term of this IngredientObjectItems.
+
+        The original search term that found this food item.  # noqa: E501
+
+        :param search_term: The search_term of this IngredientObjectItems.  # noqa: E501
+        :type: str
+        """
+
+        self._search_term = search_term
+
+    @property
+    def score(self):
+        """Gets the score of this IngredientObjectItems.  # noqa: E501
+
+        A value that represents how similar the name of this food item is to the original search term.  # noqa: E501
+
+        :return: The score of this IngredientObjectItems.  # noqa: E501
+        :rtype: str
+        """
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        """Sets the score of this IngredientObjectItems.
+
+        A value that represents how similar the name of this food item is to the original search term.  # noqa: E501
+
+        :param score: The score of this IngredientObjectItems.  # noqa: E501
+        :type: str
+        """
+
+        self._score = score
 
     def to_dict(self):
         """Returns the model properties as a dict"""
