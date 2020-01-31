@@ -1,4 +1,4 @@
-# BrandedFoodObjectComponents
+# IngredientObjectComponents
 
 ## Properties
 Name | Type | Description | Notes

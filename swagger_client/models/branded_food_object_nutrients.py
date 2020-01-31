@@ -3,7 +3,7 @@
 """
     Chomp Food Database API Documentation
 
-    __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |   # noqa: E501
+    ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)   # noqa: E501
 
     OpenAPI spec version: 1.0.0-oas3
     
@@ -29,70 +29,182 @@ class BrandedFoodObjectNutrients(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'chomp': 'list[BrandedFoodObjectNutrientsChomp]',
-        'usda': 'list[BrandedFoodObjectNutrientsUsda]'
+        'name': 'str',
+        'per_100g': 'float',
+        'measurement_unit': 'str',
+        'rank': 'int',
+        'data_points': 'int',
+        'description': 'str'
     }
 
     attribute_map = {
-        'chomp': 'chomp',
-        'usda': 'usda'
+        'name': 'name',
+        'per_100g': 'per_100g',
+        'measurement_unit': 'measurement_unit',
+        'rank': 'rank',
+        'data_points': 'data_points',
+        'description': 'description'
     }
 
-    def __init__(self, chomp=None, usda=None):  # noqa: E501
+    def __init__(self, name=None, per_100g=None, measurement_unit=None, rank=None, data_points=None, description=None):  # noqa: E501
         """BrandedFoodObjectNutrients - a model defined in Swagger"""  # noqa: E501
-        self._chomp = None
-        self._usda = None
+        self._name = None
+        self._per_100g = None
+        self._measurement_unit = None
+        self._rank = None
+        self._data_points = None
+        self._description = None
         self.discriminator = None
-        if chomp is not None:
-            self.chomp = chomp
-        if usda is not None:
-            self.usda = usda
+        if name is not None:
+            self.name = name
+        if per_100g is not None:
+            self.per_100g = per_100g
+        if measurement_unit is not None:
+            self.measurement_unit = measurement_unit
+        if rank is not None:
+            self.rank = rank
+        if data_points is not None:
+            self.data_points = data_points
+        if description is not None:
+            self.description = description
 
     @property
-    def chomp(self):
-        """Gets the chomp of this BrandedFoodObjectNutrients.  # noqa: E501
+    def name(self):
+        """Gets the name of this BrandedFoodObjectNutrients.  # noqa: E501
 
-        An array containing an object for each nutrient data point  # noqa: E501
+        Nutrient name  # noqa: E501
 
-        :return: The chomp of this BrandedFoodObjectNutrients.  # noqa: E501
-        :rtype: list[BrandedFoodObjectNutrientsChomp]
+        :return: The name of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: str
         """
-        return self._chomp
+        return self._name
 
-    @chomp.setter
-    def chomp(self, chomp):
-        """Sets the chomp of this BrandedFoodObjectNutrients.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BrandedFoodObjectNutrients.
 
-        An array containing an object for each nutrient data point  # noqa: E501
+        Nutrient name  # noqa: E501
 
-        :param chomp: The chomp of this BrandedFoodObjectNutrients.  # noqa: E501
-        :type: list[BrandedFoodObjectNutrientsChomp]
+        :param name: The name of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: str
         """
 
-        self._chomp = chomp
+        self._name = name
 
     @property
-    def usda(self):
-        """Gets the usda of this BrandedFoodObjectNutrients.  # noqa: E501
+    def per_100g(self):
+        """Gets the per_100g of this BrandedFoodObjectNutrients.  # noqa: E501
 
-        An array containing an object for each nutrient data point as found in the USDA database  # noqa: E501
+        Amount of the nutrient per 100g of food  # noqa: E501
 
-        :return: The usda of this BrandedFoodObjectNutrients.  # noqa: E501
-        :rtype: list[BrandedFoodObjectNutrientsUsda]
+        :return: The per_100g of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: float
         """
-        return self._usda
+        return self._per_100g
 
-    @usda.setter
-    def usda(self, usda):
-        """Sets the usda of this BrandedFoodObjectNutrients.
+    @per_100g.setter
+    def per_100g(self, per_100g):
+        """Sets the per_100g of this BrandedFoodObjectNutrients.
 
-        An array containing an object for each nutrient data point as found in the USDA database  # noqa: E501
+        Amount of the nutrient per 100g of food  # noqa: E501
 
-        :param usda: The usda of this BrandedFoodObjectNutrients.  # noqa: E501
-        :type: list[BrandedFoodObjectNutrientsUsda]
+        :param per_100g: The per_100g of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: float
         """
 
-        self._usda = usda
+        self._per_100g = per_100g
+
+    @property
+    def measurement_unit(self):
+        """Gets the measurement_unit of this BrandedFoodObjectNutrients.  # noqa: E501
+
+        The unit used for the measure of this nutrient  # noqa: E501
+
+        :return: The measurement_unit of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: str
+        """
+        return self._measurement_unit
+
+    @measurement_unit.setter
+    def measurement_unit(self, measurement_unit):
+        """Sets the measurement_unit of this BrandedFoodObjectNutrients.
+
+        The unit used for the measure of this nutrient  # noqa: E501
+
+        :param measurement_unit: The measurement_unit of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: str
+        """
+
+        self._measurement_unit = measurement_unit
+
+    @property
+    def rank(self):
+        """Gets the rank of this BrandedFoodObjectNutrients.  # noqa: E501
+
+        Nutrient rank  # noqa: E501
+
+        :return: The rank of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: int
+        """
+        return self._rank
+
+    @rank.setter
+    def rank(self, rank):
+        """Sets the rank of this BrandedFoodObjectNutrients.
+
+        Nutrient rank  # noqa: E501
+
+        :param rank: The rank of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: int
+        """
+
+        self._rank = rank
+
+    @property
+    def data_points(self):
+        """Gets the data_points of this BrandedFoodObjectNutrients.  # noqa: E501
+
+        Number of observations on which the value is based  # noqa: E501
+
+        :return: The data_points of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_points
+
+    @data_points.setter
+    def data_points(self, data_points):
+        """Sets the data_points of this BrandedFoodObjectNutrients.
+
+        Number of observations on which the value is based  # noqa: E501
+
+        :param data_points: The data_points of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: int
+        """
+
+        self._data_points = data_points
+
+    @property
+    def description(self):
+        """Gets the description of this BrandedFoodObjectNutrients.  # noqa: E501
+
+        Description of the nutrient source  # noqa: E501
+
+        :return: The description of this BrandedFoodObjectNutrients.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this BrandedFoodObjectNutrients.
+
+        Description of the nutrient source  # noqa: E501
+
+        :param description: The description of this BrandedFoodObjectNutrients.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

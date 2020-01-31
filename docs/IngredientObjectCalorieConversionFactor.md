@@ -1,4 +1,4 @@
-# BrandedFoodObjectCalorieConversionFactor
+# IngredientObjectCalorieConversionFactor
 
 ## Properties
 Name | Type | Description | Notes

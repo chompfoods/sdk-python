@@ -3,7 +3,7 @@
 """
     Chomp Food Database API Documentation
 
-    __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |   # noqa: E501
+    ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)   # noqa: E501
 
     OpenAPI spec version: 1.0.0-oas3
     
@@ -36,14 +36,10 @@ class BrandedFoodObjectItems(object):
         'package': 'BrandedFoodObjectPackage',
         'serving': 'BrandedFoodObjectServing',
         'categories': 'list[str]',
-        'nutrients': 'BrandedFoodObjectNutrients',
-        'calorie_conversion_factor': 'BrandedFoodObjectCalorieConversionFactor',
-        'protein_conversion_factor': 'float',
+        'nutrients': 'list[BrandedFoodObjectNutrients]',
         'diet_labels': 'BrandedFoodObjectDietLabels',
         'diet_flags': 'list[BrandedFoodObjectDietFlags]',
         'packaging_photos': 'BrandedFoodObjectPackagingPhotos',
-        'components': 'list[BrandedFoodObjectComponents]',
-        'portions': 'list[BrandedFoodObjectPortions]',
         'allergens': 'list[str]',
         'brand_list': 'list[str]',
         'countries': 'list[str]',
@@ -53,10 +49,9 @@ class BrandedFoodObjectItems(object):
         'has_english_ingredients': 'bool',
         'minerals': 'list[str]',
         'traces': 'list[str]',
-        'common_name': 'str',
+        'vitamins': 'list[str]',
         'description': 'str',
-        'keywords': 'list[str]',
-        'footnote': 'str'
+        'keywords': 'list[str]'
     }
 
     attribute_map = {
@@ -68,13 +63,9 @@ class BrandedFoodObjectItems(object):
         'serving': 'serving',
         'categories': 'categories',
         'nutrients': 'nutrients',
-        'calorie_conversion_factor': 'calorie_conversion_factor',
-        'protein_conversion_factor': 'protein_conversion_factor',
         'diet_labels': 'diet_labels',
         'diet_flags': 'diet_flags',
         'packaging_photos': 'packaging_photos',
-        'components': 'components',
-        'portions': 'portions',
         'allergens': 'allergens',
         'brand_list': 'brand_list',
         'countries': 'countries',
@@ -84,13 +75,12 @@ class BrandedFoodObjectItems(object):
         'has_english_ingredients': 'has_english_ingredients',
         'minerals': 'minerals',
         'traces': 'traces',
-        'common_name': 'common_name',
+        'vitamins': 'vitamins',
         'description': 'description',
-        'keywords': 'keywords',
-        'footnote': 'footnote'
+        'keywords': 'keywords'
     }
 
-    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, calorie_conversion_factor=None, protein_conversion_factor=None, diet_labels=None, diet_flags=None, packaging_photos=None, components=None, portions=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, common_name=None, description=None, keywords=None, footnote=None):  # noqa: E501
+    def __init__(self, barcode=None, name=None, brand=None, ingredients=None, package=None, serving=None, categories=None, nutrients=None, diet_labels=None, diet_flags=None, packaging_photos=None, allergens=None, brand_list=None, countries=None, country_details=None, palm_oil_ingredients=None, ingredient_list=None, has_english_ingredients=None, minerals=None, traces=None, vitamins=None, description=None, keywords=None):  # noqa: E501
         """BrandedFoodObjectItems - a model defined in Swagger"""  # noqa: E501
         self._barcode = None
         self._name = None
@@ -100,13 +90,9 @@ class BrandedFoodObjectItems(object):
         self._serving = None
         self._categories = None
         self._nutrients = None
-        self._calorie_conversion_factor = None
-        self._protein_conversion_factor = None
         self._diet_labels = None
         self._diet_flags = None
         self._packaging_photos = None
-        self._components = None
-        self._portions = None
         self._allergens = None
         self._brand_list = None
         self._countries = None
@@ -116,10 +102,9 @@ class BrandedFoodObjectItems(object):
         self._has_english_ingredients = None
         self._minerals = None
         self._traces = None
-        self._common_name = None
+        self._vitamins = None
         self._description = None
         self._keywords = None
-        self._footnote = None
         self.discriminator = None
         if barcode is not None:
             self.barcode = barcode
@@ -137,20 +122,12 @@ class BrandedFoodObjectItems(object):
             self.categories = categories
         if nutrients is not None:
             self.nutrients = nutrients
-        if calorie_conversion_factor is not None:
-            self.calorie_conversion_factor = calorie_conversion_factor
-        if protein_conversion_factor is not None:
-            self.protein_conversion_factor = protein_conversion_factor
         if diet_labels is not None:
             self.diet_labels = diet_labels
         if diet_flags is not None:
             self.diet_flags = diet_flags
         if packaging_photos is not None:
             self.packaging_photos = packaging_photos
-        if components is not None:
-            self.components = components
-        if portions is not None:
-            self.portions = portions
         if allergens is not None:
             self.allergens = allergens
         if brand_list is not None:
@@ -169,14 +146,12 @@ class BrandedFoodObjectItems(object):
             self.minerals = minerals
         if traces is not None:
             self.traces = traces
-        if common_name is not None:
-            self.common_name = common_name
+        if vitamins is not None:
+            self.vitamins = vitamins
         if description is not None:
             self.description = description
         if keywords is not None:
             self.keywords = keywords
-        if footnote is not None:
-            self.footnote = footnote
 
     @property
     def barcode(self):
@@ -251,7 +226,7 @@ class BrandedFoodObjectItems(object):
     def ingredients(self):
         """Gets the ingredients of this BrandedFoodObjectItems.  # noqa: E501
 
-        Ingredients in order of highest value to least  # noqa: E501
+        This food item's ingredients from greatest quantity to least  # noqa: E501
 
         :return: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
         :rtype: str
@@ -262,7 +237,7 @@ class BrandedFoodObjectItems(object):
     def ingredients(self, ingredients):
         """Sets the ingredients of this BrandedFoodObjectItems.
 
-        Ingredients in order of highest value to least  # noqa: E501
+        This food item's ingredients from greatest quantity to least  # noqa: E501
 
         :param ingredients: The ingredients of this BrandedFoodObjectItems.  # noqa: E501
         :type: str
@@ -337,9 +312,10 @@ class BrandedFoodObjectItems(object):
     def nutrients(self):
         """Gets the nutrients of this BrandedFoodObjectItems.  # noqa: E501
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :return: The nutrients of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectNutrients
+        :rtype: list[BrandedFoodObjectNutrients]
         """
         return self._nutrients
 
@@ -347,56 +323,13 @@ class BrandedFoodObjectItems(object):
     def nutrients(self, nutrients):
         """Sets the nutrients of this BrandedFoodObjectItems.
 
+        An array containing nutrient informatio objects for this food item  # noqa: E501
 
         :param nutrients: The nutrients of this BrandedFoodObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectNutrients
+        :type: list[BrandedFoodObjectNutrients]
         """
 
         self._nutrients = nutrients
-
-    @property
-    def calorie_conversion_factor(self):
-        """Gets the calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-
-
-        :return: The calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: BrandedFoodObjectCalorieConversionFactor
-        """
-        return self._calorie_conversion_factor
-
-    @calorie_conversion_factor.setter
-    def calorie_conversion_factor(self, calorie_conversion_factor):
-        """Sets the calorie_conversion_factor of this BrandedFoodObjectItems.
-
-
-        :param calorie_conversion_factor: The calorie_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :type: BrandedFoodObjectCalorieConversionFactor
-        """
-
-        self._calorie_conversion_factor = calorie_conversion_factor
-
-    @property
-    def protein_conversion_factor(self):
-        """Gets the protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-
-        The multiplication factor used to calculate protein from nitrogen  # noqa: E501
-
-        :return: The protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: float
-        """
-        return self._protein_conversion_factor
-
-    @protein_conversion_factor.setter
-    def protein_conversion_factor(self, protein_conversion_factor):
-        """Sets the protein_conversion_factor of this BrandedFoodObjectItems.
-
-        The multiplication factor used to calculate protein from nitrogen  # noqa: E501
-
-        :param protein_conversion_factor: The protein_conversion_factor of this BrandedFoodObjectItems.  # noqa: E501
-        :type: float
-        """
-
-        self._protein_conversion_factor = protein_conversion_factor
 
     @property
     def diet_labels(self):
@@ -462,52 +395,6 @@ class BrandedFoodObjectItems(object):
         """
 
         self._packaging_photos = packaging_photos
-
-    @property
-    def components(self):
-        """Gets the components of this BrandedFoodObjectItems.  # noqa: E501
-
-        An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
-
-        :return: The components of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectComponents]
-        """
-        return self._components
-
-    @components.setter
-    def components(self, components):
-        """Sets the components of this BrandedFoodObjectItems.
-
-        An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)  # noqa: E501
-
-        :param components: The components of this BrandedFoodObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectComponents]
-        """
-
-        self._components = components
-
-    @property
-    def portions(self):
-        """Gets the portions of this BrandedFoodObjectItems.  # noqa: E501
-
-        An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
-
-        :return: The portions of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: list[BrandedFoodObjectPortions]
-        """
-        return self._portions
-
-    @portions.setter
-    def portions(self, portions):
-        """Sets the portions of this BrandedFoodObjectItems.
-
-        An array of objects containing information on discrete amounts of a food found in this item  # noqa: E501
-
-        :param portions: The portions of this BrandedFoodObjectItems.  # noqa: E501
-        :type: list[BrandedFoodObjectPortions]
-        """
-
-        self._portions = portions
 
     @property
     def allergens(self):
@@ -715,27 +602,27 @@ class BrandedFoodObjectItems(object):
         self._traces = traces
 
     @property
-    def common_name(self):
-        """Gets the common_name of this BrandedFoodObjectItems.  # noqa: E501
+    def vitamins(self):
+        """Gets the vitamins of this BrandedFoodObjectItems.  # noqa: E501
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        An array of vitamins that are found in this item  # noqa: E501
 
-        :return: The common_name of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: str
+        :return: The vitamins of this BrandedFoodObjectItems.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._common_name
+        return self._vitamins
 
-    @common_name.setter
-    def common_name(self, common_name):
-        """Sets the common_name of this BrandedFoodObjectItems.
+    @vitamins.setter
+    def vitamins(self, vitamins):
+        """Sets the vitamins of this BrandedFoodObjectItems.
 
-        Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")  # noqa: E501
+        An array of vitamins that are found in this item  # noqa: E501
 
-        :param common_name: The common_name of this BrandedFoodObjectItems.  # noqa: E501
-        :type: str
+        :param vitamins: The vitamins of this BrandedFoodObjectItems.  # noqa: E501
+        :type: list[str]
         """
 
-        self._common_name = common_name
+        self._vitamins = vitamins
 
     @property
     def description(self):
@@ -782,29 +669,6 @@ class BrandedFoodObjectItems(object):
         """
 
         self._keywords = keywords
-
-    @property
-    def footnote(self):
-        """Gets the footnote of this BrandedFoodObjectItems.  # noqa: E501
-
-        Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.  # noqa: E501
-
-        :return: The footnote of this BrandedFoodObjectItems.  # noqa: E501
-        :rtype: str
-        """
-        return self._footnote
-
-    @footnote.setter
-    def footnote(self, footnote):
-        """Sets the footnote of this BrandedFoodObjectItems.
-
-        Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.  # noqa: E501
-
-        :param footnote: The footnote of this BrandedFoodObjectItems.  # noqa: E501
-        :type: str
-        """
-
-        self._footnote = footnote
 
     def to_dict(self):
         """Returns the model properties as a dict"""

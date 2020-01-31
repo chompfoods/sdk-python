@@ -1,4 +1,4 @@
-# BrandedFoodObjectPortions
+# IngredientObjectPortions
 
 ## Properties
 Name | Type | Description | Notes

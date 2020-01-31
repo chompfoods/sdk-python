@@ -5,7 +5,7 @@
 """
     Chomp Food Database API Documentation
 
-    __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |   # noqa: E501
+    ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)   # noqa: E501
 
     OpenAPI spec version: 1.0.0-oas3
     
@@ -21,8 +21,6 @@ from swagger_client.api_client import ApiClient
 from swagger_client.configuration import Configuration
 # import models into sdk package
 from swagger_client.models.branded_food_object import BrandedFoodObject
-from swagger_client.models.branded_food_object_calorie_conversion_factor import BrandedFoodObjectCalorieConversionFactor
-from swagger_client.models.branded_food_object_components import BrandedFoodObjectComponents
 from swagger_client.models.branded_food_object_country_details import BrandedFoodObjectCountryDetails
 from swagger_client.models.branded_food_object_diet_flags import BrandedFoodObjectDietFlags
 from swagger_client.models.branded_food_object_diet_labels import BrandedFoodObjectDietLabels
@@ -31,15 +29,15 @@ from swagger_client.models.branded_food_object_diet_labels_vegan import BrandedF
 from swagger_client.models.branded_food_object_diet_labels_vegetarian import BrandedFoodObjectDietLabelsVegetarian
 from swagger_client.models.branded_food_object_items import BrandedFoodObjectItems
 from swagger_client.models.branded_food_object_nutrients import BrandedFoodObjectNutrients
-from swagger_client.models.branded_food_object_nutrients_chomp import BrandedFoodObjectNutrientsChomp
-from swagger_client.models.branded_food_object_nutrients_usda import BrandedFoodObjectNutrientsUsda
 from swagger_client.models.branded_food_object_package import BrandedFoodObjectPackage
 from swagger_client.models.branded_food_object_packaging_photos import BrandedFoodObjectPackagingPhotos
 from swagger_client.models.branded_food_object_packaging_photos_front import BrandedFoodObjectPackagingPhotosFront
 from swagger_client.models.branded_food_object_packaging_photos_ingredients import BrandedFoodObjectPackagingPhotosIngredients
 from swagger_client.models.branded_food_object_packaging_photos_nutrition import BrandedFoodObjectPackagingPhotosNutrition
-from swagger_client.models.branded_food_object_portions import BrandedFoodObjectPortions
 from swagger_client.models.branded_food_object_serving import BrandedFoodObjectServing
 from swagger_client.models.ingredient_object import IngredientObject
+from swagger_client.models.ingredient_object_calorie_conversion_factor import IngredientObjectCalorieConversionFactor
+from swagger_client.models.ingredient_object_components import IngredientObjectComponents
 from swagger_client.models.ingredient_object_items import IngredientObjectItems
 from swagger_client.models.ingredient_object_nutrients import IngredientObjectNutrients
+from swagger_client.models.ingredient_object_portions import IngredientObjectPortions

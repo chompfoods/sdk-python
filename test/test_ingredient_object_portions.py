@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import swagger_client
-from models.branded_food_object_country_details import BrandedFoodObjectCountryDetails  # noqa: E501
+from models.ingredient_object_portions import IngredientObjectPortions  # noqa: E501
 from swagger_client.rest import ApiException
 
 
-class TestBrandedFoodObjectCountryDetails(unittest.TestCase):
-    """BrandedFoodObjectCountryDetails unit test stubs"""
+class TestIngredientObjectPortions(unittest.TestCase):
+    """IngredientObjectPortions unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestBrandedFoodObjectCountryDetails(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBrandedFoodObjectCountryDetails(self):
-        """Test BrandedFoodObjectCountryDetails"""
+    def testIngredientObjectPortions(self):
+        """Test IngredientObjectPortions"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.branded_food_object_country_details.BrandedFoodObjectCountryDetails()  # noqa: E501
+        # model = swagger_client.models.ingredient_object_portions.IngredientObjectPortions()  # noqa: E501
         pass
 
 
